@@ -3,12 +3,12 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null:false|
-|name|integer|null: false,foreign_key :true|
+|name|integer|null: false|
 |password|integer|null: false,|
 |mail_address|integer|null: false|
 ## Association
 has_many :group_users
-has_many :groups, through: :group_users
+has_many :groups, through::group_users
 has_many :messages
 
 # GROUP_USERS TABLE
@@ -22,10 +22,10 @@ belongs_to :group
 # GROUP TABLE
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false, foreign_key :true|
+|name|tynytext|null: false|
 ## Association
 has_many :gruop_users
-has_many :users, through: group_users
+has_many :users, through::group_users
 has_many :messages
 
 
