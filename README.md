@@ -22,7 +22,7 @@ belongs_to :group
 # GROUP TABLE
 |Column|Type|Options|
 |------|----|-------|
-|name|tynytext|null: false|
+|name|string|null: false|
 ## Association
 has_many :gruop_users
 has_many :users, through::group_users
@@ -33,8 +33,10 @@ has_many :messages
 # MESSAGE TABLE
 |Column|Type|Options|
 |------|----|-------|
-|message|integer|null: false|
-|image|text|null: false|
+|message|integer|
+|image|text|
+|user_id|integer|null: false, foreign_key :true|
+|group_id|integer|null: false, foreign_key: true|
 ## Association
 -belongs_to :group, 
 -belongs_to :user, 
