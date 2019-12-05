@@ -7,24 +7,27 @@
 |pass_ward|integer|null: false,|
 |mail_address|integer|null: false|
 ## Association
-- has_many :group, through: :user_id
-- has_many :message
+has_many :group_users
+has_many :groups, through: :group_users
+has_many :messages
 
-# USER_ID
-|user_id|integer|null: false, fore_key:true|
+# GROUP_USERS TABLE
+|user_id|int|null: false, foreign_key :true|
+|group_id|int|null: false, foreign_key: true|
 ## Association
-belongs_to : user
-belongs_to : group  
+belongs_to :user
+belongs_to :group 
 
 
 # GROUP TABLE
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text|null: false, fore_key:true|
-|user_id|integer|null: false, fore_key:true|
+|group_name|text|null: false|
 ## Association
--has_many :groups,through, user_group
--has_many :user
+has_many :gruop_users
+has_many :users, through: group_users
+has_many :messages
+
 
 
 # MESSAGE TABLE
@@ -32,7 +35,6 @@ belongs_to : group
 |------|----|-------|
 |message|integer|null: false, foreign_key:true|
 |phot|text|null: false, foreugn_key:true|
-|user_id|integer|null: false, foreign_key:true|
 ## Association
 -belongs_to :group, 
 -belongs_to :user, 
