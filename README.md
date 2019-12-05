@@ -2,8 +2,8 @@
 # USER TABLE
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null:false|
-|name|integer|null: false|
+|id|string|null:false|
+|name|string|null: false|
 |password|integer|null: false,|
 |mail_address|integer|null: false|
 ## Association
@@ -33,7 +33,7 @@ has_many :messages
 # MESSAGE TABLE
 |Column|Type|Options|
 |------|----|-------|
-|message|integer|
+|message|text|
 |image|text|
 |user_id|integer|null: false, foreign_key :true|
 |group_id|integer|null: false, foreign_key: true|
