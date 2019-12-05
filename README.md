@@ -2,8 +2,8 @@
 # USER TABLE
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null:false|
-|user_name|integer|null: false|
+|id|int|null:false|
+|user_name|int|null: false,foreign_key :true|
 |pass_ward|integer|null: false,|
 |mail_address|integer|null: false|
 ## Association
@@ -22,7 +22,7 @@ belongs_to :group
 # GROUP TABLE
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text|null: false|
+|group_name|text|null: false, foreign_key :true|
 ## Association
 has_many :gruop_users
 has_many :users, through: group_users
@@ -33,7 +33,7 @@ has_many :messages
 # MESSAGE TABLE
 |Column|Type|Options|
 |------|----|-------|
-|message|integer|null: false, foreign_key:true|
+|message|int|null: false|
 |phot|text|null: false, foreugn_key:true|
 ## Association
 -belongs_to :group, 
