@@ -1,0 +1,15 @@
+.side-ber
+  .side-ber__top-content
+    .side-ber__top-content__user
+      .side-ber__top-content__user__user-name      
+        = current_user.name
+      .side-ber__top-content__user__user-icon
+        = link_to edit_user_path(current_user),class:"edit_icon"do
+          %i.far.fa-edit
+        = link_to"#",class:"set_icon"do
+          %i.fas.fa-cog
+  .side-ber__group
+    .side-ber__group__name
+      グループ名
+    .side-ber__group__message
+      グループメッセージ
