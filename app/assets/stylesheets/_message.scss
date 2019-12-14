@@ -24,13 +24,15 @@
         height:20px;
         background-color: #2f3e51;
         font-size:15px;
-      }
+        color:#ffffff;
+    }
     &__message{
         margin-top:5px;
         width:260px;
         height:20px;
         background-color: #2f3e51;
         font-size:11px;
+        color:#ffffff;
     }
   }
   &__top-content{
@@ -70,8 +72,15 @@
   display: none;
   color: #31aef0;
 }
-
-
+.group_link{
+  color:#ffffff;
+}
+.group_name{
+  color:#ffffff;
+}
+.aaa{
+  text-decoration: none;
+}
 .main-chat{
   height:100vh;
   width:calc(100vw - 300px);
