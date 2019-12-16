@@ -81,6 +81,10 @@
 .aaa{
   text-decoration: none;
 }
+.form__message{
+  width:800px;
+
+}
 .main-chat{
   height:100vh;
   width:calc(100vw - 300px);
@@ -143,6 +147,7 @@
         background-color: #ffffff;
         color:#999999;
         padding: 10px;
+        display: flex;
       }
       &__icon{
         height:50px;
