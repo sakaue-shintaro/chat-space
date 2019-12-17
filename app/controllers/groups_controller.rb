@@ -19,7 +19,7 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = Groups.name
+    # @group = Group.name
   end
 
   def update
