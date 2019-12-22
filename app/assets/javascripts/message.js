@@ -1,38 +1,40 @@
 $(function(){
   function buildHTML(message){
     if (message.image) {
-      var html =`<div class="message">
-      <div class="message__upper-message">
-      <div class="message__upper-message__user-name">
-      ${message.user_name}
+      var html =
+      `<div class="message">
+        <div class="message__upper-message">
+          <div class="message__upper-message__user-name">
+            ${message.user_name}
       </div>
-      <div class="message__upper-message__date">
-      ${message.date}
+        <div class="message__upper-message__date">
+          ${message.date}
+        </div>
       </div>
-      </div>
-      <div class="message__lower-message">
-      <p class="lower-message__content">
-      ${message.text}
-      ${message.image}
-      </p>
-      </div>
+          <div class="message__lower-message">
+            <p class="lower-message__content">
+              ${message.text}
+              ${message.image}
+          </p>
+        </div>
       </div>`;
     }
     else {
-      var html =`<div class="message">
-      <div class="message__upper-message">
-      <div class="message__upper-message__user-name">
-      ${message.user_name}
-      </div>
-      <div class="message__upper-message__date">
-      ${message.date}
-      </div>
-      </div>
-      <div class="message__lower-message">
-      <p class="lower-message__content">
-      ${message.text}
-      </p>
-      </div>
+      var html =
+      `<div class="message">
+        <div class="message__upper-message">
+          <div class="message__upper-message__user-name">
+            ${message.user_name}
+        </div>
+        <div class="message__upper-message__date">
+          ${message.date}
+        </div>
+        </div>
+        <div class="message__lower-message">
+          <p class="lower-message__content">
+          ${message.text}
+          </p>
+        </div>
       </div>`;
     }
     console.log(message)
