@@ -1,7 +1,7 @@
 .main-chat
   .main-chat__header
     .main-chat__header__right-content
-      = link_to 'Edit', edit_group_path(current_user)
+      = link_to 'Edit', edit_group_path(@group)
     .main-chat__header__left-content
       .main-chat__header__left-content__group-name
         = @group.name
@@ -9,14 +9,15 @@
         - @group.users.each do|user|
           = user.name 
   .main-chat__main-content
-    = render @messages
+    .main-chat__main-content__message-space
+      = render @messages
   .main-chat__footer
     .main-chat__footer__form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-    .main-chat__footer__icon
-      %label{class:"form-image"} 
-        %i.far.fa-image.fa-lg
-        %input{type: "file",:id =>"btn-image"}
-    .main-chat__footer__send-btn
-      Send
+        .main-chat__footer__form__icon
+          %label{class:"form-image"} 
+            %i.far.fa-image.fa-lg
+            %input{type: "file",:id =>"btn-image"}
+        .main-chat__footer__form__send-btn
+          = f.submit'Send',class:'send-btn'
