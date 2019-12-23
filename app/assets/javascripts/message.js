@@ -20,7 +20,7 @@ $(function(){
     }
     else if (message.text) {
       var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="upper-message">` +
+        `<div class="message__upper-message">` +
           `<div class="message__upper-message__user-name">` +
             message.user_name +
           `</div>` +
