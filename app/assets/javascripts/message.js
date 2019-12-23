@@ -88,13 +88,12 @@ $(function(){
         var insertHTML = '';
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
-          console.log(message)
         });
         $('.main-chat__main-content__message-space').append(insertHTML);
         $('.main-chat__main-content__message-space').animate({ scrollTop: $('.main-chat__main-content__message-space')[0].scrollHeight});
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
