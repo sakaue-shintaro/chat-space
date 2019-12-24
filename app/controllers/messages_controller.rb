@@ -5,26 +5,31 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user)
   end
-
+  
   def create
     @messages = @group.messages.new(message_params)
     
     if @messages.save
-    respond_to do |format|
-    format.html { redirect_to group_messages_path(@group), notice: "メッセージを送信しました" }
-    format.json
+      respond_to do |format|
+        format.html { redirect_to group_messages_path(@group), notice: "メッセージを送信しました" }
+        format.json
+      end
+    # else
+    #   #@message = Message.new
+    #   #@messages = @group.messages.includes(:user)
+    #   flash.now[:alert] = 'メッセージを入力してください。'
+    #   respond_to do |format|
+    #     format.html { redirect_to group_messages_path(@group), notice: "メッセージを送信しました" }
+    #     format.json
+    #   # render :index
+    #   end
     end
-    else
-    @messages = @group.messages.includes(:user)
-    flash.now[:alert] = 'メッセージを入力してください。'
-    render :index
+  end
+    private
+    def message_params
+      params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
     end
-  end
-  private
-  def message_params
-    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
-  end
-  def set_group
-    @group = Group.find(params[:group_id])
-  end
+    def set_group
+      @group = Group.find(params[:group_id])
+    end
 end

@@ -64,11 +64,16 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+     
+      if(Object.keys(data).length == 0){
+        alert("me")
+      }else{
       var html = buildHTML(data);
       $('.main-chat__main-content__message-space').append(html);
       $('.main-chat__main-content__message-space').animate({ scrollTop: $('.main-chat__main-content__message-space')[0].scrollHeight});
       $('#new_message')[0].reset();
       $('.send-btn').prop('disabled', false);
+      }
 
     })
     .fail(function(){
