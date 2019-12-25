@@ -16,8 +16,8 @@
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .main-chat__footer__form__icon
-          %label{class:"form-image"} 
-            %i.far.fa-image.fa-lg
-            %input{type: "file",:id =>"btn-image"}
+          =f.label :image, class:'form__icon__form-image'do  
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
         .main-chat__footer__form__send-btn
           = f.submit'Send',class:'send-btn'

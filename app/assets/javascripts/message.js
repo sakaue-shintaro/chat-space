@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
     if (message.text && message.image) {
-      var html = `<div class="message" data-message-id=` + message.id + `>` 
+      var html = `<div class="message" data-message-id=` + message.id + `>` +
       `<div class="message_upper-message">` +
         `<div class="message__upper-message__user-name">` +
           message.user_name +
@@ -66,7 +66,8 @@ $(function(){
     .done(function(data){
      
       if(Object.keys(data).length == 0){
-        alert("me")
+        alert("メッセージが空です")
+        $('.send-btn').prop('disabled', false);
       }else{
       var html = buildHTML(data);
       $('.main-chat__main-content__message-space').append(html);
@@ -77,7 +78,7 @@ $(function(){
 
     })
     .fail(function(){
-      alert('!!!!!!!');
+      alert('メッセージを入力してください！');
     })
   })
   var reloadMessages = function() {
