@@ -99,6 +99,10 @@
 .hidden{
   display: none;
 }
+a{
+  text-decoration: none;
+  color:#31aef0;
+}
 .main-chat{
   height:100vh;
   width:calc(100vw - 300px);
