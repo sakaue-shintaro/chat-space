@@ -8,6 +8,8 @@
       .main-chat__header__left-content__user-name
         - @group.users.each do|user|
           = user.name 
+    .main-chat__header__member
+      Member:
   .main-chat__main-content
     .main-chat__main-content__message-space
       = render @messages

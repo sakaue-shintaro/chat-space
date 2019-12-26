@@ -2,15 +2,15 @@ $(function(){
   function buildHTML(message){
     if (message.text && message.image) {
       var html = `<div class="message" data-message-id=` + message.id + `>` +
-      `<div class="message_upper-message">` +
+      `<div class="message__upper-message">` +
         `<div class="message__upper-message__user-name">` +
-          message.user_name +
+          message.user_name+
         `</div>` +
         `<div class="message__upper-message__date">` +
           message.date +
         `</div>` +
       `</div>` +
-      `<div class="mesasge_lower-message">` +
+      `<div class="mesasge__lower-message">` +
         `<p class="message__lower-message__content">` +
           message.text +
         `</p>` +
@@ -20,20 +20,20 @@ $(function(){
     }
     else if (message.text) {
       var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="message__upper-message">` +
-          `<div class="message__upper-message__user-name">` +
-            message.user_name +
-          `</div>` +
-          `<div class="message__upper-message__date">` +
-            message.date +
-          `</div>` +
+      `<div class="message__upper-message">` +
+        `<div class="message__upper-message__user-name">` +
+          message.user_name+
         `</div>` +
-        `<div class="message__lower-message">` +
-          `<p class="message__lower-message__content">` +
-            message.text +
-          `</p>` +
+        `<div class="message__upper-message__date">` +
+          message.date +
         `</div>` +
-      `</div>`
+      `</div>` +
+      `<div class="mesasge__lower-message">` +
+        `<p class="message__lower-message__content">` +
+          message.text +
+        `</p>` +
+      `</div>` +
+    `</div>`
     } else if (message.image) {
       var html = `<div class="message" data-message-id=` + message.id + `>` +
         `<div class="upper-message">` +
@@ -102,7 +102,7 @@ $(function(){
       alert('error');
     });
   };
-  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-    setInterval(reloadMessages, 7000);}
+  // if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+  //   setInterval(reloadMessages, 7000);}
 })
 

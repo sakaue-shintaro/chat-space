@@ -129,6 +129,7 @@ a{
           &__date{
             height:20px;
             width:300px;
+            margin-top: 10px;
             font-size:12px;
             color:#999999;
             display: inline-block; 
@@ -177,6 +178,15 @@ a{
     background-color:#ffffff;
     border: solid #eeeeee;
     position: fixed;
+    &__member{
+      color:#999999;
+      position:absolute;
+      left:10px;
+      bottom: 10px;
+      font-size:12px;
+      height:10px;
+      width:20px
+    }
     &__right-content{
       height:40px;
       width:80px;
@@ -207,7 +217,7 @@ a{
         height:25px;
         color:#999999;
         position:absolute;
-        left:40px;
+        left:70px;
         bottom: 0;
         font-size:12px;
       }
