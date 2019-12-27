@@ -80,11 +80,17 @@ li {
   }
 }
 
+#user-search-result{
+  width:500px;
+  margin-left: 270px;
+}
+
 .chat-group-user {
   padding: 0 15px;
   line-height: 50px;
   font-size: 14px;
   border-bottom: 1px solid #ddd;
+  width:600px;
   &:after {
     content: "";
     clear: both;

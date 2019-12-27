@@ -35,17 +35,18 @@ $(function(){
       `</div>` +
     `</div>`
     } else if (message.image) {
-      var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="upper-message">` +
-          `<div class="upper-message__user-name">` +
+      var html = 
+      `<div class="message" data-message-id=` + message.id + `>` +
+        `<div class="message__upper-message">` +
+          `<div class="message__upper-message__user-name">` +
             message.user_name +
           `</div>` +
-          `<div class="upper-message__date">` +
+          `<div class="message__upper-message__date">` +
             message.date +
           `</div>` +
         `</div>` +
-        `<div class="lower-message">` +
-          `<img src="` + message.image + `" class="lower-message__image" >` +
+        `<div class="message__lower-message">` +
+          `<img src="` + message.image + `" class="message__lower-message__image" >` +
         `</div>` +
       `</div>`
     };
