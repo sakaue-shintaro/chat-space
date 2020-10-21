@@ -47,7 +47,7 @@ set :unicorn_rack_env, "production"
 # keys: '~/.ssh/first_aws_rsa'
 # forward_agent: false,
 # auth_methods: %w(password)
-}
+# }
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
