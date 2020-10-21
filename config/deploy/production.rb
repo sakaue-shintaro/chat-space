@@ -8,6 +8,8 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 server '3.131.116.196', user: 'ec2-user', roles: %w{app db web}
 
+set :rails_env, "production"
+set :unicorn_rack_env, "production"
 
 # role-based syntax
 # ==================
@@ -41,8 +43,8 @@ server '3.131.116.196', user: 'ec2-user', roles: %w{app db web}
 #
 # Global options
 # --------------
-set :ssh_options, {
-keys: '~/.ssh/first_aws_rsa'
+# set :ssh_options, {
+# keys: '~/.ssh/first_aws_rsa'
 # forward_agent: false,
 # auth_methods: %w(password)
 }
