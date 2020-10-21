@@ -1,4 +1,6 @@
-$('.message__lower-message__content').each(function() {
-    //http,httpsなどで始まる文字列を自動リンクにする
-    $(this).html($(this).html().replace(/((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g, '<a href="$1>$1</a>'));
-})
+$(function(){
+    $('.lower-message__content').each(function(){
+        $(this).html($(this).html().replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig,"<a href='$1'>$1</a>"));
+    });
+});
+ 
