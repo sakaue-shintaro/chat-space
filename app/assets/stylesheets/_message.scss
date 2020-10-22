@@ -73,6 +73,7 @@
 }
 .form__message{
   width:850px;
+  padding: 10px;
 }
 
 .new_message{
@@ -207,7 +208,6 @@ a{
     &__a{
       position: relative;
       &__form{
-        height:50px;
         width:40%;
         margin-right: 200px;
         background-color:#ffffff;
