@@ -17,7 +17,7 @@
     .main-chat__footer__a
       .main-chat__footer__a__form
         = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+          = f.text_area :content, class: 'form__message', placeholder: 'type a message'
           .main-chat__footer__a__form__icon
             =f.label :image, class:'form__icon__form-image'do  
               = icon('fas', 'image', class: 'icon')

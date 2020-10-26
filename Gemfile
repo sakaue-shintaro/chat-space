@@ -66,6 +66,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'
 gem 'fog-aws'
+gem 'mini_racer'
+gem 'rb-readline', :require=>true
 group :production do
 gem 'unicorn', '5.4.1'
 end
