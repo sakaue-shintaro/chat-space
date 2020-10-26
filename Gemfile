@@ -71,3 +71,6 @@ gem 'rb-readline', :require=>true
 group :production do
 gem 'unicorn','5.4.1'
 end
+group :production, :staging do
+  gem 'unicorn','5.4.1'
+end
