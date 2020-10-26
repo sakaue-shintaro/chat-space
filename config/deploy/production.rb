@@ -10,7 +10,7 @@ server '54.150.179.58', user: 'ec2-user', roles: %w{app db web}
 
 set :rails_env, "production"
 set :unicorn_rack_env, "production"
-set :ssh_options, keys: '~/.ssh/first_aws_rsa' 
+set :ssh_options, keys: '~/.ssh/aws_git_rsa' 
 # role-based syntax
 # ==================
 
