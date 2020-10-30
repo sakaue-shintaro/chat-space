@@ -1,3 +1,71 @@
+.side-ber{
+  display: inline-block;
+  width   :300px;
+  height  :100vh;
+  background-color:#2f3e51;
+  &__group{
+    width: 300px;
+    height: 105px;
+    background-color:#2f3e51;
+    padding-top:20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color:#ffffff;
+    &__name{
+        width:260px;
+        height:20px;
+        background-color: #2f3e51;
+        font-size:15px;
+      }
+    &__message{
+        margin-top:5px;
+        width:260px;
+        height:20px;
+        background-color: #2f3e51;
+        font-size:11px;
+    }
+  }
+  &__top-content{
+    width:100%;
+    height:100px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &__user{
+      width:260px;
+      height:20px;
+      color:white;
+      display: flex;
+      justify-content: space-between;
+      &__user-name{
+        font-size: 16px;
+      }
+      &__user-icon{
+        display: inline-block;
+        display: flex;
+      }
+    }
+  }
+}
+ .edit_icon{
+  color:#ffffff;
+  display: inline-block;
+  text-decoration: none;
+}
+.set_icon{
+  color:#ffffff;
+  margin-left: 5px;
+}
+#btn-image{
+  display: none;
+  color: #31aef0;
+}
+a{
+  text-decoration: none;
+}
+
 
 @media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
 .side-ber{
