@@ -548,14 +548,15 @@ a{
     }
     #message_content{
       height:100px;
-      width:310px;
+      width:200px;
     }
     .send-btn{
       background-color:#31aef0;
-      height:30px;
-      width:60px;
+      height:35px;
+      width:45px;
       color:#ffffff;
       text-align: center;
+      margin-left: 3px;
     }
     .hidden{
       display: none;
@@ -596,7 +597,7 @@ a{
           padding-left:20px;
           border: solid 1px #38aef0;
           position: absolute;
-          left:1000px;
+          left:120px;
           clear:right;
         }
         &__left-content{
@@ -625,18 +626,14 @@ a{
       }
       &__main-content{ 
         position: absolute;
-        left:0px;
-        width: 461px;
+        left:0;
           &__message-space{
           height: calc(100vh - 190px);
           background-color: #fafafa;
           overflow: scroll;
-          
-          
+          padding-left: 0;
           .message{
-            position: absolute;
-            left:-30px;
-            padding-top: 50px;
+            padding-top: 10px;
             width: 250px;
             &__upper-message{
             
@@ -682,15 +679,17 @@ a{
             color:#999999;
             
             &__icon{
+              font-size: 30px;
             height:50px;
             text-align: right;
             padding:15px;
             position: absolute;
-            left:900px;
+            left:200px;
+            bottom: 0;
             }
             &__send-btn{
               position: absolute;
-              left: 250px;
+              left: 200px;
               color:#999999;
             }
           }
