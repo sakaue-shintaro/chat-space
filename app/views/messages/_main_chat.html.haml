@@ -1,8 +1,14 @@
 .main-chat
   .main-chat__header
+    
     .main-chat__header__right-content
       = link_to 'Edit', edit_group_path(@group)
     .main-chat__header__left-content
+      .main-chat__header__left-content__kintai-link
+        %p
+          勤怠は
+          %a(href='https://linktr.ee/matsui_shuzo_kintai') ここ
+          から
       .main-chat__header__left-content__group-name
         = @group.name
       .main-chat__header__left-content__user-name
@@ -23,4 +29,4 @@
           -#     = icon('fas', 'image', class: 'icon')
           -#     = f.file_field :image, class: 'hidden'
           .main-chat__footer__a__form__send-btn
-            = f.submit'Send',class:'send-btn'
+            = f.submit'送信',class:'send-btn'

@@ -115,6 +115,7 @@ a{
     overflow: scroll;
     position: absolute;
     top:0;
+    
     &__member{
       color:#999999;
       position:absolute;
@@ -128,7 +129,6 @@ a{
       height:40px;
       width:80px;
       color:#31aef0;
-      margin-right:40px;
       margin-top:28px;
       line-height: 40px;
       padding-left:20px;
@@ -138,15 +138,22 @@ a{
       clear:right;
     }
     &__left-content{
-      width:100px;
+      
       height:100px;
       position: relative;
+      &__kintai-link{
+        width: 400px;
+        height: 30px;
+        padding: 5px;
+        margin-top: 10px;
+        text-align: center;
+        font-style: italic;
+        margin-left: -40px;
+      }
       &__group-name{
         width:300px;
         height:25px;
         color:#333333;
-        position: absolute;
-        top:35px;
         font-size:20px;
       }
       &__user-name{
@@ -347,6 +354,14 @@ a{
       overflow: scroll;
       position: absolute;
       top:0;
+      &__kintai-link{
+        width: 200px;
+        height: 30px;
+        padding: 5px;
+        margin-top: 20px;
+        text-align: center;
+        font-style: italic;
+      }
       &__member{
         color:#999999;
         position:absolute;
@@ -357,20 +372,20 @@ a{
         width:20px
       }
       &__right-content{
-        height:40px;
-        width:80px;
+        height:20px;
+        width:40px;
         color:#31aef0;
-        margin-right:40px;
+        margin-right:0px;
         margin-top:28px;
         line-height: 40px;
         padding-left:20px;
-        border: solid 1px #38aef0;
+        
         position: absolute;
         left:1000px;
         clear:right;
       }
       &__left-content{
-        width:100px;
+        
         height:100px;
         position: relative;
         &__group-name{
@@ -504,7 +519,9 @@ a{
           margin-bottom: 40px;
           color: white;
           &__name{
-            font-size: 8px;
+            width: 100px;
+            margin-left: -10px;
+            font-size: 15px;
             margin-bottom: 5px;
             color: white;
           }
@@ -588,30 +605,34 @@ a{
           width:20px
         }
         &__right-content{
-          height:40px;
-          width:80px;
-          color:#31aef0;
-          margin-right:40px;
-          margin-top:28px;
-          line-height: 40px;
-          padding-left:20px;
-          border: solid 1px #38aef0;
+          height:20px;
+          width:40px;
+          color:#31aef0;          
           position: absolute;
-          left:120px;
+          left:150px;
           clear:right;
         }
         &__left-content{
           width:100px;
           height:100px;
           position: relative;
+          &__kintai-link{
+            font-size: 5px;
+            width: 200px;
+            height: 15px;
+            padding-bottom: 15px;
+            margin-top: 5px;
+            margin-left: -80px;
+            text-align: center;
+            font-style: italic;
+            
+          }
           &__group-name{
             width:300px;
             height:25px;
             color:#333333;
-            position: absolute;
-            top:35px;
-            left: -30px;;
             font-size:15px;
+            margin-left: -20px;
           }
           &__user-name{
             width:500px;
@@ -636,19 +657,21 @@ a{
             padding-top: 10px;
             width: 250px;
             &__upper-message{
-            
+            height: 100px;
+            display:flex;
+            flex-direction: column;
               &__user-name  {
                 padding-top: 10px;
                 height:30px;
                 width:200px;
                 color:#333333;  
-                font-size:15px;
+                font-size:25px;
               }
               &__date{
                 height:20px;
                 width:300px;
                 margin-top: 10px;
-                font-size:10px;
+                font-size:18px;
                 color:#999999;
                 display: inline-block; 
               }
@@ -656,7 +679,7 @@ a{
             &__lower-message{
               height:100%;
               width:100%;
-              font-size:11px;
+              font-size:17px;
               color:#434A45;
             }
           }
