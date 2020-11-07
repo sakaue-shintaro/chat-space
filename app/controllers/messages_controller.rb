@@ -17,7 +17,16 @@ class MessagesController < ApplicationController
   end
 
   def edit
-    @post = Message.find_by(id: params[:id])
+    @message = Message.find(params[:id])
+  end
+
+  def update
+    if  @message.update(message_params)
+        redirect_to root_path, notice: '日報を編集しました'
+    else
+      render :edit
+      
+    end
   end
     private
     def message_params
