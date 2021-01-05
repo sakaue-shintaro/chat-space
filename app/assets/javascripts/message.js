@@ -34,22 +34,7 @@ $(function(){
         `</p>` +
       `</div>` +
     `</div>`
-    } else if (message.image) {
-      var html = 
-      `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="message__upper-message">` +
-          `<div class="message__upper-message__user-name">` +
-            message.user_name +
-          `</div>` +
-          `<div class="message__upper-message__date">` +
-            message.date +
-          `</div>` +
-        `</div>` +
-        `<div class="message__lower-message">` +
-          `<img src="` + message.image + `" class="message__lower-message__image" >` +
-        `</div>` +
-      `</div>`
-    };
+    } ;
     return html;
   };
   $('#new_message').on('submit',function(e){
@@ -65,17 +50,17 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-     
+    
       if(Object.keys(data).length == 0){
         alert("メッセージが空です")
         $('.send-btn').prop('disabled', false);
       }else{
-      // var html = buildHTML(data);
-      // $('.main-chat__main-content__message-space').append(html);
-      // $('.main-chat__main-content__message-space').animate({ scrollTop: $('.main-chat__main-content__message-space')[0].scrollHeight});
-      // $('#new_message')[0].reset();
-      // $('.send-btn').prop('disabled', false);
-      // }
+      var html = buildHTML(data);
+      $('.main-chat__main-content__message-space').append(html);
+      $('.main-chat__main-content__message-space').animate({ scrollTop: $('.main-chat__main-content__message-space')[0].scrollHeight});
+      $('#new_message')[0].reset();
+      $('.send-btn').prop('disabled', false);
+      }
 
     })
     .fail(function(){
@@ -97,7 +82,7 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         $('.main-chat__main-content__message-space').append(insertHTML);
-        $('.main-chat__main-content__message-space').animate({ scrollTop: $('.main-chat__main-content__message-space')[0].scrollHeight});
+        // $('.main-chat__main-content__message-space').animate({ scrollTop: $('.main-chat__main-content__message-space')[0].scrollHeight});
     })
     .fail(function() {
       alert('error');
