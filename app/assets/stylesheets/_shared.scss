@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     &__user{
       width:260px;
       height:20px;
@@ -68,6 +68,9 @@ a{
 
 
 @media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
+.side-ber-mobile {
+  display: none;
+}
 .side-ber{
   display: inline-block;
   width   :300px;
@@ -102,7 +105,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     &__user{
       width:260px;
       height:20px;
@@ -135,7 +138,7 @@ a{
 a{
   text-decoration: none;
 }
-  
+
 }
 
 
@@ -143,6 +146,9 @@ a{
 
 @media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
 
+  .side-ber-mobile {
+    display: none;
+  }
   .side-ber{
     display: inline-block;
     width   :150px;
@@ -177,7 +183,7 @@ a{
       display: flex;
       align-items: center;
       justify-content: center;
-      
+
       &__user{
         width:260px;
         height:20px;
@@ -215,9 +221,12 @@ a{
 
 
 @media screen and (max-width: 490px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
-  .side-ber{
+  .side-ber {
+    display: none;
+  }
+  .side-ber-mobile {
     display: inline-block;
-    width   :100px;
+    width   :100%;
     height  :100vh;
     background-color:#2f3e51;
     &__group{
@@ -250,7 +259,7 @@ a{
       display: flex;
       align-items: center;
       justify-content: center;
-      
+
       &__user{
         position: relative;
         width:200px;

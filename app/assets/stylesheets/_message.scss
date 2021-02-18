@@ -115,7 +115,7 @@ a{
     overflow: scroll;
     position: absolute;
     top:0;
-    
+
     &__member{
       color:#999999;
       position:absolute;
@@ -138,7 +138,7 @@ a{
       clear:right;
     }
     &__left-content{
-      
+
       height:100px;
       position: relative;
       &__kintai-link{
@@ -167,13 +167,13 @@ a{
       }
     }
   }
-  &__main-content{ 
+  &__main-content{
     width: calc(100vw - 300px);
     position: absolute;
     top: 100px;
     left: 300px;
     &__message-space{
-      
+
       height: calc(100vh - 190px);
       padding: 46px 40px;
       background-color: #fafafa;
@@ -187,7 +187,7 @@ a{
           &__user-name  {
             height:30px;
             width:200px;
-            color:#333333;  
+            color:#333333;
             font-size:20px;
           }
           &__date{
@@ -196,7 +196,7 @@ a{
             margin-top: 10px;
             font-size:12px;
             color:#999999;
-            display: inline-block; 
+            display: inline-block;
           }
         }
         &__lower-message{
@@ -225,7 +225,7 @@ a{
         margin-right: 200px;
         background-color:#ffffff;
         color:#999999;
-        
+
         &__icon{
         height:50px;
         text-align: right;
@@ -320,7 +320,7 @@ a{
     width:600px;
     padding: 10px;
   }
-  
+
   .new_message{
     display: flex;
     width:650px;
@@ -380,13 +380,13 @@ a{
         margin-top:28px;
         line-height: 40px;
         padding-left:20px;
-        
+
         position: absolute;
         left:1000px;
         clear:right;
       }
       &__left-content{
-        
+
         height:100px;
         position: relative;
         &__group-name{
@@ -408,7 +408,7 @@ a{
         }
       }
     }
-    &__main-content{ 
+    &__main-content{
       width: 739px;
       position: absolute;
       top: 100px;
@@ -427,7 +427,7 @@ a{
             &__user-name  {
               height:30px;
               width:200px;
-              color:#333333;  
+              color:#333333;
               font-size:20px;
             }
             &__date{
@@ -436,7 +436,7 @@ a{
               margin-top: 10px;
               font-size:12px;
               color:#999999;
-              display: inline-block; 
+              display: inline-block;
             }
           }
           &__lower-message{
@@ -465,7 +465,7 @@ a{
           margin-right: 200px;
           background-color:#ffffff;
           color:#999999;
-          
+
           &__icon{
           height:50px;
           text-align: right;
@@ -484,9 +484,12 @@ a{
   }
 
 }
-  
-@media screen and (max-width: 490px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
-    .side-ber{
+
+@media screen and (max-width: 490px) { /*ウィンドウ幅が最大489pxまでの場合に適用*/
+    .side-ber {
+      display: none;
+    }
+    .side-ber-mobile {
       width: 300px;
       color: white;
       float: left;
@@ -559,7 +562,7 @@ a{
       width:850px;
       padding: 10px;
     }
-    
+
     .new_message{
       display: flex;
       width:1200px;
@@ -608,7 +611,7 @@ a{
         &__right-content{
           height:20px;
           width:40px;
-          color:#31aef0;          
+          color:#31aef0;
           position: absolute;
           left:150px;
           clear:right;
@@ -626,7 +629,7 @@ a{
             margin-left: -80px;
             text-align: center;
             font-style: italic;
-            
+
           }
           &__group-name{
             width:300px;
@@ -646,7 +649,7 @@ a{
           }
         }
       }
-      &__main-content{ 
+      &__main-content{
         position: absolute;
         left:0;
           &__message-space{
@@ -665,7 +668,7 @@ a{
                 padding-top: 10px;
                 height:30px;
                 width:200px;
-                color:#333333;  
+                color:#333333;
                 font-size:25px;
               }
               &__date{
@@ -674,7 +677,7 @@ a{
                 margin-top: 10px;
                 font-size:18px;
                 color:#999999;
-                display: inline-block; 
+                display: inline-block;
               }
             }
             &__lower-message{
@@ -701,7 +704,7 @@ a{
             // margin-right: 200px;
             background-color:#ffffff;
             color:#999999;
-            
+
             &__icon{
               font-size: 30px;
             height:50px;
