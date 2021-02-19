@@ -1,8 +1,6 @@
 .main-chat
   .main-chat__header
 
-    .main-chat__header__right-content
-      = link_to 'Edit', edit_group_path(@group)
     .main-chat__header__left-content
       .main-chat__header__left-content__kintai-link
         %p
@@ -12,10 +10,11 @@
       .main-chat__header__left-content__group-name
         = @group.name
       .main-chat__header__left-content__user-name
+        Member:
         - @group.users.each do|user|
           = user.name
-    .main-chat__header__member
-      Member:
+    .main-chat__header__right-content
+      = link_to 'Edit', edit_group_path(@group)
   .main-chat__main-content
     .main-chat__main-content__message-space
       = render @messages
