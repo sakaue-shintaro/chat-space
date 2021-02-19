@@ -5,7 +5,7 @@
 //   // display: flex;
 // }
 
-@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
+@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用(PC用)*/
 .side-ber{
   width: 300px;
   color: white;
@@ -247,7 +247,7 @@ a{
 
 
 
-@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
+@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用(タブレット用)*/
 
   .side-ber{
     width: 100px;
@@ -485,7 +485,7 @@ a{
 
 }
 
-@media screen and (max-width: 490px) { /*ウィンドウ幅が最大489pxまでの場合に適用*/
+@media screen and (max-width: 490px) { /*ウィンドウ幅が最大489pxまでの場合に適用(スマホ用)*/
     .side-ber {
       display: none;
     }
