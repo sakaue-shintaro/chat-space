@@ -486,22 +486,9 @@ a{
 }
 
 @media screen and (max-width: 490px) { /*ウィンドウ幅が最大489pxまでの場合に適用(スマホ用)*/
-    .side-ber {
-      display: none;
-    }
-    .set_icon{
-      color:#ffffff;
-      margin-left: 5px;
-    }
     #btn-image{
       display: none;
       color: #31aef0;
-    }
-    .group_link{
-      color:#ffffff;
-    }
-    .group_name{
-      color:#ffffff;
     }
     .aaa{
       text-decoration: none;
@@ -535,36 +522,19 @@ a{
       color:#31aef0;
     }
     .main-chat{
-      // width: calc(100vw - 300px);
       &__header{
-        width: 100%;
-        padding: 0 40px;
-        display: flex;
-        justify-content: space-between;
-        border-bottom: solid 1px #eee;
-        overflow: scroll;
         &__left-content{
-          position: relative;
           &__kintai-link{
-            margin-top: 5px;
-            font-style: italic;
           }
           &__group-name{
-            color:#333333;
           }
           &__user-name{
-            width:500px;
-            height:25px;
-            color:#999999;
             font-size:12px;
             margin-top: 2%;
           }
         }
         &__right-content{
           color:#31aef0;
-          position: absolute;
-          left:150px;
-          clear:right;
         }
       }
       &__main-content{

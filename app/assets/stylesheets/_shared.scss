@@ -266,25 +266,55 @@ a{
     }
     .main-chat{
       // width: calc(100vw - 300px);
+      position: relative;
+      &__modoru{
+        position: absolute;
+        top: 0;
+        left: 0;
+        &__link {
+          display: inline-block;
+          position: relative;
+          width: 30px;
+          height: 22px;
+          margin: 20px;
+          &__span {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 2px;
+            background-color: #253141;
+            border-radius: 2px;
+            transform: rotate(-45deg);
+          }
+          &__span2 {
+            display: inline-block;
+            position: absolute;
+            top: 45%;
+            width: 50%;
+            height: 2px;
+            background-color: #253141;
+            border-radius: 2px;
+            transform: rotate(45deg);
+          }
+        }
+      }
       &__header{
         width: 100%;
-        padding: 0 40px;
+        padding: 15% 10% 5%;
         display: flex;
         justify-content: space-between;
         border-bottom: solid 1px #eee;
         overflow: scroll;
         &__left-content{
-          position: relative;
           &__kintai-link{
-            margin-top: 5px;
             font-style: italic;
           }
           &__group-name{
+            font-size: 20px;
             color:#333333;
           }
           &__user-name{
-            width:500px;
-            height:25px;
             color:#999999;
             font-size:12px;
             margin-top: 2%;
@@ -292,9 +322,6 @@ a{
         }
         &__right-content{
           color:#31aef0;
-          position: absolute;
-          left:150px;
-          clear:right;
         }
       }
       &__main-content{
