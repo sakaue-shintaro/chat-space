@@ -502,10 +502,6 @@ a{
       display: flex;
       width:1200px;
     }
-    #message_content{
-      height:100px;
-      width:200px;
-    }
     .send-btn{
       background-color:#31aef0;
       height:35px;
@@ -538,8 +534,6 @@ a{
         }
       }
       &__main-content{
-        position: absolute;
-        left:0;
           &__message-space{
           height: calc(100vh - 190px);
           background-color: #fafafa;
