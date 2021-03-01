@@ -189,6 +189,7 @@ a{
           align-items: center;
           &__user-name{
             font-size: 20px;
+            font-weight: bold;
           }
           &__user-icon{
           }
@@ -199,16 +200,12 @@ a{
         background-color: #2f3e51;
         padding: 20px 20px 0;
         overflow: auto;
-        color:#ffffff;
         text-align: center;
         &__group{
-          margin-bottom: 40px;
+          margin-bottom: 1em;
           &__name{
-            width: 100px;
-            margin-left: -10px;
-            font-size: 15px;
-            margin-bottom: 5px;
-            color: white;
+            margin: 1em 0;
+            font-size: 16px;
           }
           &__message{
             font-size: 4px;

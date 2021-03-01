@@ -31,5 +31,5 @@
     .side-ber-mobile__groups__group
       - current_user.groups.each do |group|
         = link_to group_messages_path(group), class: "group_link" do
-          .side-ber-bobile__groups__group__name
+          .side-ber-mobile__groups__group__name
             = group.name
