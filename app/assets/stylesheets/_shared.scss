@@ -1,54 +1,3 @@
-.side-ber{
-  display: inline-block;
-  width   :300px;
-  height  :100vh;
-  background-color:#2f3e51;
-  &__group{
-    width: 300px;
-    height: 105px;
-    background-color:#2f3e51;
-    padding-top:20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color:#ffffff;
-    &__name{
-        width:260px;
-        height:20px;
-        background-color: #2f3e51;
-        font-size:15px;
-        margin-bottom: 20px;      }
-    &__message{
-        margin-top:5px;
-        width:260px;
-        height:20px;
-        background-color: #2f3e51;
-        font-size:11px;
-    }
-  }
-  &__top-content{
-    width:100%;
-    height:100px;
-    background-color: #253141;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    &__user{
-      width:260px;
-      height:20px;
-      color:white;
-      display: flex;
-      justify-content: space-between;
-      &__user-name{
-        font-size: 16px;
-      }
-      &__user-icon{
-        display: inline-block;
-        display: flex;
-      }
-    }
-  }
-}
  .edit_icon{
   color:#ffffff;
   display: inline-block;
@@ -68,6 +17,9 @@ a{
 
 
 @media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
+.side-ber-mobile {
+  display: none;
+}
 .side-ber{
   display: inline-block;
   width   :300px;
@@ -102,7 +54,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     &__user{
       width:260px;
       height:20px;
@@ -135,14 +87,17 @@ a{
 a{
   text-decoration: none;
 }
-  
+
 }
 
 
 
 
-@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
+@media screen and (min-width: 491px) and (max-width: 767px) { /*ウィンドウ幅が491以上767px未満の場合に適用(タブレット)*/
 
+  .side-ber-mobile {
+    display: none;
+  }
   .side-ber{
     display: inline-block;
     width   :150px;
@@ -177,7 +132,7 @@ a{
       display: flex;
       align-items: center;
       justify-content: center;
-      
+
       &__user{
         width:260px;
         height:20px;
@@ -215,85 +170,230 @@ a{
 
 
 @media screen and (max-width: 490px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
-  .side-ber{
-    display: inline-block;
-    width   :100px;
-    height  :100vh;
-    background-color:#2f3e51;
-    &__group{
-      width: 300px;
-      height: 105px;
-      background-color:#2f3e51;
-      padding-top:20px;
-      padding-left: 20px;
-      padding-right: 20px;
-      color:#ffffff;
-      &__name{
-          width:260px;
-          height:20px;
-          background-color: #2f3e51;
-          font-size:15px;
-          margin-bottom: 20px;
+  .side-ber {
+    display: none;
+  }
+  .side-ber-mobile {
+      width: 100%;
+      color: white;
+      float: left;
+      &__top-content{
+        background-color: #253141;
+        height: 100px;
+        padding: 0 20px;
+        &__user{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          &__user-name{
+            font-size: 20px;
+            font-weight: bold;
+          }
+          &__user-icon{
+          }
         }
-      &__message{
-          margin-top:5px;
-          width:260px;
-          height:20px;
-          background-color: #2f3e51;
-          font-size:11px;
+      }
+      &__groups{
+        height: calc(100vh - 100px);
+        background-color: #2f3e51;
+        padding: 20px 20px 0;
+        overflow: auto;
+        text-align: center;
+        &__group{
+          margin-bottom: 1em;
+          &__name{
+            margin: 1em 0;
+            font-size: 16px;
+          }
+          &__message{
+            font-size: 4px;
+            color: #2f3e51;
+          }
+        }
       }
     }
-    &__top-content{
-      width:100%;
-      height:100px;
-      background-color: #253141;
+     .edit_icon{
+      color:#ffffff;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .set_icon{
+      color:#ffffff;
+      margin-left: 5px;
+    }
+    #btn-image{
+      display: none;
+      color: #31aef0;
+    }
+    .group_link{
+      color:#ffffff;
+    }
+    .group_name{
+      color:#ffffff;
+    }
+    .aaa{
+      text-decoration: none;
+    }
+    .form__message{
+      width:850px;
+      padding: 10px;
+    }
+
+    .new_message{
       display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      &__user{
-        position: relative;
-        width:200px;
-        height:20px;
-        color:white;
+      width:1200px;
+    }
+    #message_content{
+      height:50px;
+      width:200px;
+    }
+    .send-btn{
+      background-color:#31aef0;
+      height:35px;
+      width:45px;
+      color:#ffffff;
+      text-align: center;
+      margin-left: 3px;
+    }
+    .hidden{
+      display: none;
+    }
+    a{
+      text-decoration: none;
+      color:#31aef0;
+    }
+    .main-chat{
+      // width: calc(100vw - 300px);
+      position: relative;
+      &__modoru{
+        position: absolute;
+        top: 0;
+        left: 0;
+        &__link {
+          display: inline-block;
+          position: relative;
+          width: 30px;
+          height: 22px;
+          margin: 20px;
+          &__span {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 2px;
+            background-color: #253141;
+            border-radius: 2px;
+            transform: rotate(-45deg);
+          }
+          &__span2 {
+            display: inline-block;
+            position: absolute;
+            top: 45%;
+            width: 50%;
+            height: 2px;
+            background-color: #253141;
+            border-radius: 2px;
+            transform: rotate(45deg);
+          }
+        }
+      }
+      &__header{
+        width: 100%;
+        padding: 15% 10% 5%;
         display: flex;
         justify-content: space-between;
-        &__user-name{
-          width: 100%;
-          position: absolute;
-          top:-25px;
-          left:7px;
-          margin-top: 5px;
-          margin-right: 5px;
-          font-size: 15px;
+        border-bottom: solid 1px #eee;
+        overflow: scroll;
+        &__left-content{
+          &__kintai-link{
+            font-style: italic;
+          }
+          &__group-name{
+            font-size: 20px;
+            color:#333333;
+          }
+          &__user-name{
+            color:#999999;
+            font-size:12px;
+            margin-top: 2%;
+          }
         }
-        &__user-icon{
-          position: absolute;
-          top:10px;
-          left: 10px;
-          display: inline-block;
-          display: flex;
+        &__right-content{
+          color:#31aef0;
+        }
+      }
+      &__main-content{
+        width: 100%;
+          &__message-space{
+          height: calc(100vh - 190px);
+          background-color: #fafafa;
+          overflow: scroll;
+          padding-left: 0;
+          .message{
+            padding-top: 10px;
+            width: 250px;
+            &__upper-message{
+            height: 100px;
+            display:flex;
+            flex-direction: column;
+              &__user-name  {
+                padding-top: 10px;
+                height:30px;
+                width:200px;
+                color:#333333;
+                font-size:25px;
+              }
+              &__date{
+                height:20px;
+                width:300px;
+                margin-top: 10px;
+                font-size:18px;
+                color:#999999;
+                display: inline-block;
+              }
+            }
+            &__lower-message{
+              height:100%;
+              width:100%;
+              font-size:17px;
+              color:#434A45;
+            }
+          }
+        }
+      }
+      &__footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color:#d2d2d2;
+        display: flex;
+        padding: 20px;
+        &__a{
+          position: relative;
+          &__form{
+            width:200px;
+            // margin-right: 200px;
+            background-color:#ffffff;
+            color:#999999;
+
+            &__icon{
+            font-size: 30px;
+            height:50px;
+            text-align: right;
+            padding:15px;
+            position: absolute;
+            left:200px;
+            bottom: 0;
+            }
+            &__send-btn{
+              position: absolute;
+              left: 200px;
+              color:#999999;
+            }
+          }
         }
       }
     }
-  }
-   .edit_icon{
-     margin-right: 5px;
-    color:#ffffff;
-    display: inline-block;
-    text-decoration: none;
-  }
-  .set_icon{
-    color:#ffffff;
-    margin-left: 5px;
-  }
-  #btn-image{
-    display: none;
-    color: #31aef0;
-  }
-  a{
-    text-decoration: none;
-  }
-
-
-	}
+}

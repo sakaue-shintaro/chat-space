@@ -5,7 +5,7 @@
 //   // display: flex;
 // }
 
-@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
+@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用(PC用)*/
 .side-ber{
   width: 300px;
   color: white;
@@ -115,7 +115,7 @@ a{
     overflow: scroll;
     position: absolute;
     top:0;
-    
+
     &__member{
       color:#999999;
       position:absolute;
@@ -138,7 +138,7 @@ a{
       clear:right;
     }
     &__left-content{
-      
+
       height:100px;
       position: relative;
       &__kintai-link{
@@ -167,13 +167,13 @@ a{
       }
     }
   }
-  &__main-content{ 
+  &__main-content{
     width: calc(100vw - 300px);
     position: absolute;
     top: 100px;
     left: 300px;
     &__message-space{
-      
+
       height: calc(100vh - 190px);
       padding: 46px 40px;
       background-color: #fafafa;
@@ -187,7 +187,7 @@ a{
           &__user-name  {
             height:30px;
             width:200px;
-            color:#333333;  
+            color:#333333;
             font-size:20px;
           }
           &__date{
@@ -196,7 +196,7 @@ a{
             margin-top: 10px;
             font-size:12px;
             color:#999999;
-            display: inline-block; 
+            display: inline-block;
           }
         }
         &__lower-message{
@@ -225,7 +225,7 @@ a{
         margin-right: 200px;
         background-color:#ffffff;
         color:#999999;
-        
+
         &__icon{
         height:50px;
         text-align: right;
@@ -247,7 +247,7 @@ a{
 
 
 
-@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
+@media screen and (min-width: 491px) and (max-width: 767px) { /*ウィンドウ幅が491~767pxまでの場合に適用(タブレット用)*/
 
   .side-ber{
     width: 100px;
@@ -320,7 +320,7 @@ a{
     width:600px;
     padding: 10px;
   }
-  
+
   .new_message{
     display: flex;
     width:650px;
@@ -380,13 +380,13 @@ a{
         margin-top:28px;
         line-height: 40px;
         padding-left:20px;
-        
+
         position: absolute;
         left:1000px;
         clear:right;
       }
       &__left-content{
-        
+
         height:100px;
         position: relative;
         &__group-name{
@@ -408,7 +408,7 @@ a{
         }
       }
     }
-    &__main-content{ 
+    &__main-content{
       width: 739px;
       position: absolute;
       top: 100px;
@@ -427,7 +427,7 @@ a{
             &__user-name  {
               height:30px;
               width:200px;
-              color:#333333;  
+              color:#333333;
               font-size:20px;
             }
             &__date{
@@ -436,7 +436,7 @@ a{
               margin-top: 10px;
               font-size:12px;
               color:#999999;
-              display: inline-block; 
+              display: inline-block;
             }
           }
           &__lower-message{
@@ -465,7 +465,7 @@ a{
           margin-right: 200px;
           background-color:#ffffff;
           color:#999999;
-          
+
           &__icon{
           height:50px;
           text-align: right;
@@ -484,73 +484,11 @@ a{
   }
 
 }
-  
-@media screen and (max-width: 490px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
-    .side-ber{
-      width: 300px;
-      color: white;
-      float: left;
-      &__top-content{
-        background-color: #253141;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
-        &__user{
-          width:260px;
-          height:20px;
-          display: flex;
-          justify-content: space-between;
-          &__user-name{
-            font-size: 16px;
-          }
-          &__user-icon{
-            display: inline-block;
-            display: flex;
-          }
-        }
-      }
-      &__groups{
-        height: calc(100vh - 100px);
-        background-color: #2f3e51;
-        padding: 20px 20px 0;
-        overflow: auto;
-        color:#ffffff;
-        &__group{
-          margin-bottom: 40px;
-          color: white;
-          &__name{
-            width: 100px;
-            margin-left: -10px;
-            font-size: 15px;
-            margin-bottom: 5px;
-            color: white;
-          }
-          &__message{
-            font-size: 4px;
-            color: #2f3e51;
-          }
-        }
-      }
-    }
-     .edit_icon{
-      color:#ffffff;
-      display: inline-block;
-      text-decoration: none;
-    }
-    .set_icon{
-      color:#ffffff;
-      margin-left: 5px;
-    }
+
+@media screen and (max-width: 490px) { /*ウィンドウ幅が最大489pxまでの場合に適用(スマホ用)*/
     #btn-image{
       display: none;
       color: #31aef0;
-    }
-    .group_link{
-      color:#ffffff;
-    }
-    .group_name{
-      color:#ffffff;
     }
     .aaa{
       text-decoration: none;
@@ -559,14 +497,10 @@ a{
       width:850px;
       padding: 10px;
     }
-    
+
     .new_message{
       display: flex;
       width:1200px;
-    }
-    #message_content{
-      height:100px;
-      width:200px;
     }
     .send-btn{
       background-color:#31aef0;
@@ -584,71 +518,22 @@ a{
       color:#31aef0;
     }
     .main-chat{
-      // width: calc(100vw - 300px);
-      position: relative;
-      float: left;
       &__header{
-        width:200px;
-        padding: 0 40px;
-        display: flex;
-        justify-content: space-between;
-        border-bottom: solid 1px #eee;
-        overflow: scroll;
-        position: absolute;
-        top:0;
-        &__member{
-          color:#999999;
-          position:absolute;
-          left:10px;
-          bottom: 15px;
-          font-size:12px;
-          height:10px;
-          width:20px
-        }
-        &__right-content{
-          height:20px;
-          width:40px;
-          color:#31aef0;          
-          position: absolute;
-          left:150px;
-          clear:right;
-        }
         &__left-content{
-          width:100px;
-          height:100px;
-          position: relative;
           &__kintai-link{
-            font-size: 15px;
-            width: 200px;
-            height: 15px;
-            padding-bottom: 15px;
-            margin-top: 5px;
-            margin-left: -80px;
-            text-align: center;
-            font-style: italic;
-            
           }
           &__group-name{
-            width:300px;
-            height:25px;
-            color:#333333;
-            font-size:15px;
-            margin-left: -20px;
           }
           &__user-name{
-            width:500px;
-            height:25px;
-            color:#999999;
-            position:absolute;
-            left:25px;
-            bottom: 0;
             font-size:12px;
+            margin-top: 2%;
           }
         }
+        &__right-content{
+          color:#31aef0;
+        }
       }
-      &__main-content{ 
-        position: absolute;
-        left:0;
+      &__main-content{
           &__message-space{
           height: calc(100vh - 190px);
           background-color: #fafafa;
@@ -665,7 +550,7 @@ a{
                 padding-top: 10px;
                 height:30px;
                 width:200px;
-                color:#333333;  
+                color:#333333;
                 font-size:25px;
               }
               &__date{
@@ -674,7 +559,7 @@ a{
                 margin-top: 10px;
                 font-size:18px;
                 color:#999999;
-                display: inline-block; 
+                display: inline-block;
               }
             }
             &__lower-message{
@@ -701,7 +586,7 @@ a{
             // margin-right: 200px;
             background-color:#ffffff;
             color:#999999;
-            
+
             &__icon{
               font-size: 30px;
             height:50px;
