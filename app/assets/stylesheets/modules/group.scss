@@ -104,10 +104,10 @@ li {
     float: right;
     display: inline-block;
     cursor: pointer;
-    &--add {
+    &add {
       color: #38aef0;
     }
-    &--remove {
+    &remove {
       color: #f05050;
     }
   }
